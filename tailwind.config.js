@@ -24,7 +24,8 @@ module.exports = {
 
     extend: {
       backgroundSize: {
-        '100%': '100% 80%'
+        '100%': '100% 80%',
+        '100': '100% 100%'
       },
       screens: {
         'min-sm': { 'min': '576px' },

@@ -6,7 +6,7 @@ import ComanButn from "./ComanButn";
 const WhitePaper = () => {
   return (
     <div id="whitepaper">
-      <div className="bg-[url(./assets/image/whitepaper-bg.png)] bg-cover bg-no-repeat pb-[101px] relative z-[1]">
+      <div className="bg-[url(./assets/image/whitepaper-bg.png)] bg-100 bg-no-repeat pb-[101px] relative z-[1]">
         <div className="max-w-[1405px] mx-auto px-3 lg:mt-[158px] md:mt-20 mt-6">
           <div className="flex felx-row flex-wrap -mx-3 pt-10">
             <div className="w-1/4 sm:flex justify-start hidden  ">

@@ -17,36 +17,50 @@ function App() {
       setload(false)
       document.body.classList.remove("overflow-hidden")
     }, 4000);
-  })
-  const [media, setmedia] = useState("")
-  useEffect(() => {
-    setInterval(() => {
-      document.title = ("WuaoCoin") + (`-(${window.innerWidth} )`)
-      // console.log(window.innerWidth)
-    }, 1);
-    return () => { console.clear(); }
-  }, [])
-  // useState[BackTop, setBackTop] = useState(true)
-  function backtops() {
-    window.scrollTo(0, 0);
-  }
-  window.addEventListener("scroll", function () {
-    const mybackto = document.getElementById("backtops");
-    if (window.scrollY > 500) {
-      mybackto.style.display = "block";
-    }
-    else {
-      mybackto.style.display = "none";
-    }
-  });
-  // function Backtop() {
 
+  })
+  // const [media, s etmedia] = useState("")
+
+
+
+
+  useEffect(() => {
+
+    function handleWindowResize() {
+      document.title = ("WuaoCoin") + (`-(${window.innerWidth} )`)
+      console.log(window.innerWidth)
+    }
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    }
+  }, [])
+  // clear()
+  // window.onresize = clear
+
+
+
+  // useState[BackTop, setBackTop] = useState(true)
+  // function backtops() {
+  //   window.scrollTo(0, 0);
   // }
+  // window.addEventListener("scroll", function () {
+  //   const mybackto = document.getElementById("backtops");
+  //   if (window.scrollY > 500) {
+  //     mybackto.style.display = "block";
+  //   }
+  //   else {
+  //     mybackto.style.display = "none";
+  //   }
+  //   // return () => { console.clear(); }
+
+  // });
+
   return (
     <div className="App">
       <div>{load ? (<div className=' fixed w-full h-full flex justify-center items-center bg-ffb-orange z-30 
       '><div className='w-10 border-t-4 rounded-full animate-spin  h-10'></div></div>) : <Home />}</div>
-      <button onClick={backtops} id='backtops'>hello</button>
     </div>
   );
 }

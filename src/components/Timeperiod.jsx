@@ -30,10 +30,15 @@ const Timeperiod = () => {
       setTime(timeTaken);
     }, 0);
   }, []);
-
+  function clear() {
+      return () => {
+        console.clear();
+      };
+  }
+  clear();
   return (
     <div id="ico">
-      <div className=" bg-[url(./assets/image/publicsale.png)] bg-cover bg-no-repeat py-[85px] mt-[100px]">
+      <div className=" bg-[url(./assets/image/publicsale.png)] bg-100 bg-no-repeat py-[85px] mt-[100px]">
         <div className="max-w-[610px] px-3 mx-auto">
           <h2 className="text-white  text-center font-Montserrat font-bold sm:text-[30px] text-2xl leading-[56px] max-w-[609px]">
             Public Sale 5% in ERC20 & BEP20, 100% for the Community

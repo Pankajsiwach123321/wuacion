@@ -3,7 +3,7 @@ import unicef from "../assets/image/unicef.webp";
 const PartnerShip = () => {
   return (
     <div>
-      <div className="bg-[url(./assets/image/partnership-bg.png)] bg-cover bg-no-repeat py-[78px] mt-[100px]">
+      <div className="bg-[url(./assets/image/partnership-bg.png)] bg-100 bg-no-repeat py-[78px] mt-[100px]">
         <div className="max-w-[1141px] mx-auto px-3">
           <h2 className=" text-white  font-Montserrat sm:text-[50px] text-4xl font-bold  leading-normal text-center">
             Partnership
